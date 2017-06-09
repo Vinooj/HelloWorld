@@ -1,0 +1,25 @@
+{
+  "application": {
+    "name": "jboss_app",
+    "version": "2.0",
+    "project": "Default",
+    "components": {
+      "component": [
+        {
+          "name": "JBoss-RC",
+          "description": "This is jpetstore jboss component",
+          "tier": "JBossAppTier",
+          "artifact": {
+            "artifactType": "JBOSS",
+            "artifactName": "org.ec:hello",
+            "artifactVersion": "1.0",
+            "sourceDirectory" : "jbosshello",
+            "artifactFileName": "HelloWorld.war",
+            "jbossConfig" : "myJboss",
+            "jbossCli" : "/usr/local/share/jboss/bin/jboss-cli.sh"
+          }
+        }
+      ]
+    }
+  }
+}
