@@ -20,6 +20,17 @@
           }
         }
       ]
+    },
+    "environments" : {
+      "environment" : [
+        {
+          "name": "JbossEnv",
+          "project": "Default",
+          "tierMap": {
+            "JBossAppTier": "AppTier"
+          }
+        }
+      ]
     }
   }
 }
