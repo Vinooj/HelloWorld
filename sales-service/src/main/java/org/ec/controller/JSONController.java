@@ -9,12 +9,6 @@
 
 package org.ec.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-import org.ec.domain.SalesData;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,32 +22,26 @@ public class JSONController
     //~ Methods ----------------------------------------------------------------
 
     @RequestMapping(
-        value  = "/1",
-        method = RequestMethod.GET
+        value    = "/1",
+        method   = RequestMethod.GET,
+        produces = "application/json;charset=UTF-8"
     )
     @ResponseBody String getSalesData()
     {
-        return
-            "{      \"firstName\": \"John\",      \"lastName\": \"Smith\",      \"age\": 25,      \"address\":      {          \"streetAddress\": \"21 2nd Street\",          \"city\": \"New York\",          \"state\": \"NY\",          \"postalCode\": \"10021\"      },      \"phoneNumber\":      [          {            \"type\": \"home\",            \"number\": \"212 555-1234\"          },          {            \"type\": \"fax\",            \"number\": \"646 555-4567\"          }      ] }";
+        String jsonStr = "{ \"Title\": \"Sales Dashboard\", \"DateCreated\": \"05/20/2017\", \"metrics\": [ { \"type\" : \"revenue\", \"total\": \"32245\" }, { \"type\": \"issues\", \"number\": \"212 555-1234\" }, { \"type\": \"twitterFollowers\", \"number\": \"245\" } ] }";
+
+        return jsonStr;
     }
 
     /*@RequestMapping(
-        value  = "/dataJson",
-        method = RequestMethod.GET
-    )
-    @ResponseBody public List<SalesData> getSalesData2()
-    {
-        List<SalesData> saleList = new ArrayList();
-        Random          random   = new Random();
-
-        for (int i = 0; i < 10; i++) {
-            SalesData sale = new SalesData();
-
-            sale.setCompletedTasks(random.nextInt(10));
-            sale.setDailySales(random.nextInt(100));
-            saleList.add(sale);
-        }
-
-        return saleList;
-    }*/
+     *  value  = "/dataJson", method = RequestMethod.GET ) @ResponseBody public
+     * List<SalesData> getSalesData2() { List<SalesData> saleList = new
+     * ArrayList(); Random          random   = new Random();
+     *
+     * for (int i = 0; i < 10; i++) {     SalesData sale = new SalesData();
+     *
+     *   sale.setCompletedTasks(random.nextInt(10));
+     * sale.setDailySales(random.nextInt(100));     saleList.add(sale); }
+     *
+     * return saleList;}*/
 }
