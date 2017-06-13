@@ -29,7 +29,7 @@
             "artifactVersion": "1.0",
             "sourceDirectory" : "helloservice",
             "artifactFileName": "HelloService.war",
-            "jbossConfig" : "myJboss",
+            "jbossConfig" : "2ndJboss",
             "jbossCli" : "/usr/local/share/jboss/bin/jboss-cli.sh"
           }
         }
