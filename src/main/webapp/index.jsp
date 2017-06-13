@@ -1,5 +1,6 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Sales Dashboard</h2>
+<img src="dashboard.png" alt="Sales Dashboard"/>  
 </body>
 </html>
