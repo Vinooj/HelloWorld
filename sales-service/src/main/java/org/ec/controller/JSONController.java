@@ -16,23 +16,32 @@ import java.util.Random;
 import org.ec.domain.SalesData;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/service")
+@RequestMapping("/data")
 public class JSONController
 {
 
     //~ Methods ----------------------------------------------------------------
 
     @RequestMapping(
-        value  = "/data",
+        value  = "/1",
         method = RequestMethod.GET
     )
-    @ResponseBody public List<SalesData> getSalesData()
+    @ResponseBody String getSalesData()
+    {
+        return
+            "{      \"firstName\": \"John\",      \"lastName\": \"Smith\",      \"age\": 25,      \"address\":      {          \"streetAddress\": \"21 2nd Street\",          \"city\": \"New York\",          \"state\": \"NY\",          \"postalCode\": \"10021\"      },      \"phoneNumber\":      [          {            \"type\": \"home\",            \"number\": \"212 555-1234\"          },          {            \"type\": \"fax\",            \"number\": \"646 555-4567\"          }      ] }";
+    }
+
+    /*@RequestMapping(
+        value  = "/dataJson",
+        method = RequestMethod.GET
+    )
+    @ResponseBody public List<SalesData> getSalesData2()
     {
         List<SalesData> saleList = new ArrayList();
         Random          random   = new Random();
@@ -46,5 +55,5 @@ public class JSONController
         }
 
         return saleList;
-    }
+    }*/
 }
