@@ -1,6 +1,6 @@
 {
   "application": {
-    "name": "jboss_app",
+    "name": "SalesDashboard",
     "version": "2.0",
     "project": "Default",
     "components": {
