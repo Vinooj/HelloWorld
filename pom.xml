@@ -2,11 +2,32 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.ec</groupId>
-  <artifactId>HelloWorld</artifactId>
-  <packaging>war</packaging>
+  <artifactId>dashboard-parent</artifactId>
+  <packaging>pom</packaging>
   <version>1.0</version>
-  <name>HelloWorld Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+  
+  <name>Sales dashboard parent</name>
+  
+  <modules>
+        <module>dashboard-webapp</module>
+        <module>sales-service</module>
+  </modules>
+  
+   <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,7 +36,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>HelloWorld</finalName>
-  </build>
+
 </project>
