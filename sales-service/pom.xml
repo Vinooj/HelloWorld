@@ -41,18 +41,12 @@
       <version>${spring.version}</version>
     </dependency>
 
-    <!-- Jackson JSON Mapper -->
-    <!--<dependency>
-      <groupId>org.codehaus.jackson</groupId>
-      <artifactId>jackson-mapper-asl</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>-->
 
-    <dependency>
+  <!--  <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>${jackson.version}-PATCH1</version>
-    </dependency>
+    </dependency>-->
 
     <dependency>
       <groupId>junit</groupId>
