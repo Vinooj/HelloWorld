@@ -6,29 +6,29 @@
     "components": {
       "component": [
         {
-          "name": "JBoss-RC",
+          "name": "SalesDashboard",
           "description": "This is the dashboard webapp",
-          "tier": "JBossAppTier",
+          "tier": "WebAppTier",
           "artifact": {
             "artifactType": "JBOSS",
-            "artifactName": "org.ec:hello",
+            "artifactName": "org.ec:dashboard",
             "artifactVersion": "1.0",
-            "sourceDirectory" : "jbosshello",
-            "artifactFileName": "HelloWorld.war",
+            "sourceDirectory" : "dashboard",
+            "artifactFileName": "dashboard.war",
             "jbossConfig" : "myJboss",
             "jbossCli" : "/usr/local/share/jboss/bin/jboss-cli.sh"
           }
         },
         {
-          "name": "JBoss-SC",
+          "name": "SalesService",
           "description": "This is the Service Application",
-          "tier": "JBossServiceTier",
+          "tier": "ServiceTier",
           "artifact": {
             "artifactType": "JBOSS",
-            "artifactName": "org.ec:helloservice",
+            "artifactName": "org.ec:saleservice",
             "artifactVersion": "1.0",
-            "sourceDirectory" : "helloservice",
-            "artifactFileName": "HelloService.war",
+            "sourceDirectory" : "salesservice",
+            "artifactFileName": "sales.war",
             "jbossConfig" : "2ndJboss",
             "jbossCli" : "/usr/local/share/jboss/bin/jboss-cli.sh"
           }
@@ -41,8 +41,8 @@
           "name": "JbossEnv",
           "project": "Default",
           "tierMap": {
-            "JBossAppTier": "AppTier",
-            "JBossServiceTier" : "ServiceTier"
+            "WebAppTier": "AppTier",
+            "ServiceTier" : "ServiceTier"
           }
         }
       ]
