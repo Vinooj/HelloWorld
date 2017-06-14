@@ -2,7 +2,7 @@
   "application": {
     "name": "SalesDashboard",
     "version": "2.0",
-    "project": "Default",
+    "project": "netdash",
     "components": {
       "component": [
         {
@@ -39,7 +39,7 @@
       "environment" : [
         {
           "name": "JbossEnv",
-          "project": "Default",
+          "project": "netdash",
           "tierMap": {
             "WebAppTier": "AppTier",
             "ServiceTier" : "ServiceTier"
